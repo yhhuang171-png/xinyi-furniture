@@ -3,265 +3,198 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>惠州新镒家具有限公司</title>
+<title>惠州新镒家具有限公司 | Hui Zhou Xin Yi Furniture Co., Ltd</title>
+<meta name="description" content="惠州新镒家具有限公司成立于2003年，是集研发、生产、销售和外贸出口于一体的家具企业，主营餐桌、茶几、餐椅、商业椅、镜子及家具配件。">
 <style>
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:"PingFang SC","Microsoft YaHei",sans-serif;background:#0f0f0f;color:#e8e0d0;}
-.nav{background:rgba(15,15,15,0.95);border-bottom:0.5px solid #2a2a2a;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;position:sticky;top:0;z-index:10;}
-.nav-logo{font-size:18px;font-weight:500;color:#c9a96e;letter-spacing:2px;}
-.nav-sub{font-size:11px;color:#888;letter-spacing:1px;margin-top:2px;}
-.nav-links{display:flex;gap:2rem;}
-.nav-links a{font-size:13px;color:#aaa;text-decoration:none;letter-spacing:0.5px;cursor:pointer;}
-.nav-links a:hover{color:#c9a96e;}
-.hero{background:#0f0f0f;padding:5rem 2rem 4rem;text-align:center;border-bottom:0.5px solid #1e1e1e;position:relative;overflow:hidden;}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,rgba(201,169,110,0.07) 0%,transparent 70%);}
-.hero-tag{font-size:11px;letter-spacing:3px;color:#c9a96e;margin-bottom:1.5rem;text-transform:uppercase;}
-.hero h1{font-size:42px;font-weight:500;color:#f0e8d8;line-height:1.2;margin-bottom:1rem;}
-.hero h1 span{color:#c9a96e;}
-.hero-sub{font-size:15px;color:#888;max-width:480px;margin:0 auto 2.5rem;line-height:1.7;}
-.hero-btns{display:flex;gap:1rem;justify-content:center;}
-.btn-gold{background:#c9a96e;color:#0f0f0f;border:none;padding:12px 28px;font-size:13px;letter-spacing:1px;cursor:pointer;border-radius:2px;font-weight:500;}
-.btn-outline{background:transparent;color:#c9a96e;border:0.5px solid #c9a96e;padding:12px 28px;font-size:13px;letter-spacing:1px;cursor:pointer;border-radius:2px;}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:0.5px solid #1e1e1e;border-bottom:0.5px solid #1e1e1e;}
-.stat{padding:2rem;text-align:center;border-right:0.5px solid #1e1e1e;}
-.stat:last-child{border-right:none;}
-.stat-num{font-size:28px;font-weight:500;color:#c9a96e;margin-bottom:4px;}
-.stat-label{font-size:12px;color:#666;}
-.section{padding:4rem 2rem;}
-.section-tag{font-size:11px;letter-spacing:3px;color:#c9a96e;margin-bottom:0.75rem;text-transform:uppercase;}
-.section-title{font-size:26px;font-weight:500;color:#f0e8d8;margin-bottom:0.5rem;}
-.section-sub{font-size:14px;color:#666;margin-bottom:3rem;}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;}
-.about-text p{font-size:14px;color:#999;line-height:1.8;margin-bottom:1rem;}
-.about-items{display:flex;flex-direction:column;gap:1rem;}
-.about-item{display:flex;align-items:flex-start;gap:1rem;padding:1rem;border:0.5px solid #1e1e1e;border-radius:2px;}
-.about-icon{width:32px;height:32px;background:#1a1a1a;border:0.5px solid #2a2a2a;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.about-icon svg{width:16px;height:16px;stroke:#c9a96e;fill:none;stroke-width:1.5;}
-.about-item-title{font-size:13px;font-weight:500;color:#e0d8c8;margin-bottom:2px;}
-.about-item-text{font-size:12px;color:#666;}
-.divider{height:0.5px;background:#1a1a1a;margin:0 2rem;}
-.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
-.product-card{background:#151515;border:0.5px solid #222;border-radius:2px;overflow:hidden;cursor:pointer;}
-.product-img{height:180px;background:#161616;display:flex;align-items:center;justify-content:center;}
-.product-img svg{width:64px;height:64px;stroke:#c9a96e;fill:none;stroke-width:1;}
-.product-info{padding:1rem;}
-.product-cat{font-size:10px;letter-spacing:2px;color:#c9a96e;margin-bottom:4px;text-transform:uppercase;}
-.product-name{font-size:14px;font-weight:500;color:#e0d8c8;margin-bottom:6px;}
-.product-desc{font-size:12px;color:#666;line-height:1.6;}
-.strengths{background:#0c0c0c;padding:4rem 2rem;border-top:0.5px solid #1a1a1a;border-bottom:0.5px solid #1a1a1a;}
-.strengths-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;}
-.strength-item{padding:1.5rem;border:0.5px solid #1e1e1e;border-radius:2px;}
-.strength-icon{width:36px;height:36px;border:0.5px solid #2a2a2a;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;}
-.strength-icon svg{width:18px;height:18px;stroke:#c9a96e;fill:none;stroke-width:1.5;}
-.strength-title{font-size:13px;font-weight:500;color:#e0d8c8;margin-bottom:6px;}
-.strength-text{font-size:12px;color:#555;line-height:1.7;}
-.contact-section{padding:4rem 2rem;}
-.contact-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:4rem;align-items:start;}
-.contact-info{display:flex;flex-direction:column;gap:1.5rem;}
-.contact-item{display:flex;gap:1rem;align-items:flex-start;}
-.contact-item svg{width:16px;height:16px;stroke:#c9a96e;fill:none;stroke-width:1.5;margin-top:3px;flex-shrink:0;}
-.contact-item-label{font-size:11px;color:#c9a96e;letter-spacing:1px;margin-bottom:4px;text-transform:uppercase;}
-.contact-item-val{font-size:13px;color:#aaa;}
-.form-group{margin-bottom:1rem;}
-.form-group label{display:block;font-size:11px;color:#888;letter-spacing:1px;margin-bottom:6px;text-transform:uppercase;}
-.form-group input,.form-group textarea,.form-group select{width:100%;background:#0c0c0c;border:0.5px solid #2a2a2a;color:#e0d8c8;padding:10px 12px;font-size:13px;font-family:inherit;border-radius:2px;outline:none;}
-.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:#c9a96e;}
-.form-group textarea{height:100px;resize:vertical;}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
-.footer{background:#080808;border-top:0.5px solid #1a1a1a;padding:2rem;display:flex;align-items:center;justify-content:space-between;}
-.footer-logo{font-size:16px;font-weight:500;color:#c9a96e;letter-spacing:2px;}
-.footer-text{font-size:12px;color:#444;}
-.section-header{margin-bottom:2.5rem;}
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#1769a8;
+  --blue-dark:#0d3f68;
+  --blue-soft:#eaf4fb;
+  --ink:#1f2d3a;
+  --muted:#667789;
+  --line:#dbe5ee;
+  --bg:#f6f9fc;
+  --white:#fff;
+  --steel:#eef2f5;
+  --gold:#b88a3b;
+}
+html{scroll-behavior:smooth}
+body{font-family:"PingFang SC","Microsoft YaHei",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+.container{width:min(1180px,calc(100% - 40px));margin:0 auto}
+.topbar{background:var(--blue-dark);color:#d8edf9;font-size:12px}
+.topbar-inner{height:34px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.topbar span{white-space:nowrap}
+.nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-inner{height:74px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand{display:flex;align-items:center;gap:13px;min-width:0}
+.brand-mark{width:44px;height:44px;background:linear-gradient(135deg,var(--blue),#3aa1d8);color:#fff;display:grid;place-items:center;font-weight:700;letter-spacing:1px}
+.brand-cn{font-size:20px;font-weight:700;color:var(--blue-dark);white-space:nowrap}
+.brand-en{font-size:11px;color:var(--muted);letter-spacing:.4px;white-space:nowrap}
+.nav-links{display:flex;align-items:center;gap:26px;font-size:14px;color:#425466}
+.nav-links a:hover{color:var(--blue)}
+.nav-cta{background:var(--blue);color:#fff!important;padding:9px 15px}
+.hero{position:relative;overflow:hidden;background:linear-gradient(110deg,rgba(13,63,104,.94),rgba(23,105,168,.78)),url("assets/catalog-page-02.png");background-size:cover;background-position:center;padding:92px 0 76px;color:#fff}
+.hero::after{content:"";position:absolute;right:-12%;bottom:-34%;width:58%;height:78%;border-radius:50%;background:rgba(255,255,255,.12)}
+.hero-content{position:relative;z-index:1;max-width:780px}
+.eyebrow{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#bfe5ff;margin-bottom:18px}
+h1{font-size:clamp(38px,5.6vw,70px);line-height:1.08;letter-spacing:0;font-weight:760;margin-bottom:22px}
+.hero p{font-size:18px;color:#eaf6ff;max-width:680px;margin-bottom:30px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;border:1px solid transparent;cursor:pointer;transition:.2s ease}
+.btn-primary{background:#fff;color:var(--blue-dark);font-weight:700}
+.btn-primary:hover{background:#eaf4fb}
+.btn-outline{border-color:rgba(255,255,255,.7);color:#fff}
+.btn-outline:hover{background:rgba(255,255,255,.12)}
+.facts{background:#fff;border-bottom:1px solid var(--line)}
+.facts-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.fact{padding:28px 26px;border-right:1px solid var(--line)}
+.fact:last-child{border-right:0}
+.fact strong{display:block;color:var(--blue);font-size:30px;line-height:1.1;margin-bottom:6px}
+.fact span{color:var(--muted);font-size:13px}
+.section{padding:76px 0;border-bottom:1px solid var(--line)}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:44px;margin-bottom:34px}
+.kicker{font-size:12px;letter-spacing:3px;color:var(--blue);font-weight:700;text-transform:uppercase;margin-bottom:8px}
+.title{font-size:clamp(28px,3vw,42px);line-height:1.18;color:var(--ink)}
+.desc{max-width:560px;color:var(--muted);font-size:15px}
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:38px;align-items:start}
+.panel{background:#fff;border:1px solid var(--line);padding:28px}
+.about-text p+p{margin-top:15px}
+.about-text{color:#435365}
+.factory-img{width:100%;display:block;border:1px solid var(--line);background:#fff;margin-bottom:18px}
+.info-list{display:grid;gap:12px;margin-top:18px}
+.info-item{display:grid;grid-template-columns:120px 1fr;gap:14px;border-top:1px solid var(--line);padding-top:12px;font-size:14px}
+.info-item span:first-child{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);padding:24px}
+.card-icon{width:42px;height:42px;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center;margin-bottom:18px}
+.card-icon svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8}
+.card h3{font-size:18px;margin-bottom:8px;color:var(--blue-dark)}
+.card p{font-size:14px;color:var(--muted)}
+.products{background:#fff}
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.product{border:1px solid var(--line);background:var(--bg);padding:16px;min-height:145px}
+.product b{display:block;color:var(--blue-dark);margin-bottom:7px}
+.product small{display:block;color:var(--gold);font-weight:700;letter-spacing:.5px;margin-bottom:8px}
+.product p{font-size:13px;color:var(--muted)}
+.catalog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.catalog-card{background:#fff;border:1px solid var(--line);overflow:hidden}
+.catalog-card img{display:block;width:100%;height:auto}
+.catalog-caption{padding:13px 16px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.step{background:#fff;padding:24px}
+.step-num{font-size:13px;color:var(--blue);font-weight:700;margin-bottom:18px}
+.step h3{font-size:17px;margin-bottom:8px}
+.step p{font-size:13px;color:var(--muted)}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px}
+.contact-list{display:grid;gap:16px;margin-top:22px}
+.contact-item{display:grid;grid-template-columns:28px 1fr;gap:12px;color:#435365}
+.contact-item svg{width:22px;height:22px;stroke:var(--blue);fill:none;stroke-width:1.8;margin-top:3px}
+.contact-label{font-size:12px;color:var(--blue);letter-spacing:1px;font-weight:700;text-transform:uppercase}
+.contact-value{font-size:14px;word-break:break-word}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:13px;color:#425466;margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:#fff;color:var(--ink);padding:11px 12px;outline:none}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue)}
+.field textarea{min-height:118px;resize:vertical}
+.submit{width:100%;background:var(--blue);color:#fff;font-weight:700}
+.submit:hover{background:var(--blue-dark)}
+.note{font-size:12px;color:var(--muted);margin-top:10px}
+.footer{background:#0d2d47;color:#c8d8e3;padding:30px 0}
+.footer-inner{display:flex;justify-content:space-between;gap:24px;align-items:center;font-size:13px}
+.footer strong{display:block;color:#fff;font-size:16px;margin-bottom:4px}
+.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(30px);opacity:0;pointer-events:none;background:#0d2d47;color:#fff;border:1px solid rgba(255,255,255,.28);padding:12px 18px;transition:.2s;z-index:60}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media (max-width:940px){
+  .topbar-inner{height:auto;padding:8px 0;display:block}
+  .topbar span{display:block}
+  .nav-links{display:none}
+  .facts-grid,.cards,.product-grid,.process{grid-template-columns:repeat(2,1fr)}
+  .about-grid,.contact-grid,.section-head{display:block}
+  .section-head .desc{margin-top:12px}
+  .panel+.panel{margin-top:18px}
+}
+@media (max-width:620px){
+  .container{width:calc(100% - 28px)}
+  .hero{padding:64px 0 54px}
+  .hero p{font-size:16px}
+  .hero-actions{display:grid}
+  .btn{width:100%}
+  .facts-grid,.cards,.product-grid,.process,.catalog-grid,.form-row{grid-template-columns:1fr}
+  .fact{border-right:0;border-bottom:1px solid var(--line)}
+  .fact:last-child{border-bottom:0}
+  .section{padding:54px 0}
+  .info-item{grid-template-columns:1fr;gap:3px}
+  .footer-inner{display:block}
+  .footer-inner div+div{margin-top:14px}
+}
 </style>
 </head>
 <body>
+<div class="topbar">
+  <div class="container topbar-inner">
+    <span>Tel: +86-752-3958948 · HP/WhatsApp/WeChat: +86 13501577768</span>
+    <span>Email: mike.sheng@vip.163.com · mike@xy-furniture.com</span>
+  </div>
+</div>
 
 <nav class="nav">
-  <div>
-    <div class="nav-logo">新镒家具</div>
-    <div class="nav-sub">惠州新镒家具有限公司</div>
-  </div>
-  <div class="nav-links">
-    <a href="#about">关于我们</a>
-    <a href="#products">产品展示</a>
-    <a href="#strengths">工厂实力</a>
-    <a href="#contact" style="color:#c9a96e;">在线询价</a>
+  <div class="container nav-inner">
+    <a class="brand" href="#top" aria-label="惠州新镒家具有限公司">
+      <div class="brand-mark">XY</div>
+      <div>
+        <div class="brand-cn">惠州新镒家具有限公司</div>
+        <div class="brand-en">Hui Zhou Xin Yi Furniture Co., Ltd</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#about">公司简介</a>
+      <a href="#strength">企业实力</a>
+      <a href="#products">产品系列</a>
+      <a href="#catalog">产品图册</a>
+      <a href="#contact" class="nav-cta">联系询价</a>
+    </div>
   </div>
 </nav>
 
-<div class="hero">
-  <div class="hero-bg"></div>
-  <div style="position:relative;">
-    <div class="hero-tag">惠州新镒家具有限公司 · 专业家具制造商</div>
-    <h1>打造每一件<span>精致家具</span><br>从设计到交付</h1>
-    <p class="hero-sub">集研发、生产、定制于一体的现代家具制造商，主营家具及配件生产，为客户提供高品质家居解决方案。</p>
-    <div class="hero-btns">
-      <button class="btn-gold" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">立即询价</button>
-      <button class="btn-outline" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">查看产品</button>
+<header class="hero" id="top">
+  <div class="container hero-content">
+    <div class="eyebrow">Great Peace Group (HK) Co., Limited</div>
+    <h1>Hui Zhou Xin Yi Furniture Co., Ltd</h1>
+    <p>成立于2003年，集研发、生产、销售与外贸出口于一体。公司拥有约30000平方米自有工厂和约200名员工，产品覆盖餐厅、客厅、卧室及商业空间家具。</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#products">查看产品型号</a>
+      <a class="btn btn-outline" href="#contact">发送采购需求</a>
     </div>
   </div>
-</div>
+</header>
 
-<div class="stats">
-  <div class="stat"><div class="stat-num">专业</div><div class="stat-label">家具及配件生产</div></div>
-  <div class="stat"><div class="stat-num">优质</div><div class="stat-label">原材料精选</div></div>
-  <div class="stat"><div class="stat-num">定制</div><div class="stat-label">OEM / ODM 服务</div></div>
-  <div class="stat"><div class="stat-num">快速</div><div class="stat-label">交货周期保障</div></div>
-</div>
+<section class="facts">
+  <div class="container facts-grid">
+    <div class="fact"><strong>2003</strong><span>公司成立年份</span></div>
+    <div class="fact"><strong>30000㎡</strong><span>自有工厂面积</span></div>
+    <div class="fact"><strong>200+</strong><span>生产与服务团队</span></div>
+    <div class="fact"><strong>Export</strong><span>专注外贸出口家具</span></div>
+  </div>
+</section>
 
-<div class="section" id="about">
-  <div class="about-grid">
-    <div>
-      <div class="section-header">
-        <div class="section-tag">关于我们</div>
-        <div class="section-title">以工艺为本<br>以品质为魂</div>
+<main>
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Company Profile</div>
+          <h2 class="title">知名外贸出口家具企业</h2>
+        </div>
+        <p class="desc">以下内容根据《惠州新镒家具有限公司简介》整理，适合作为公司官网首页的核心信息。</p>
       </div>
-      <div class="about-text">
-        <p>惠州新镒家具有限公司位于惠州市惠阳区镇隆镇甘陂村石桥村民小组，是一家专注于家具及配件研发、生产的制造型企业。</p>
-        <p>公司主营各类现代家具产品，凭借精湛的工艺与严格的品质管控，深受国内外客户的信赖与好评。</p>
-      </div>
-    </div>
-    <div class="about-items">
-      <div class="about-item">
-        <div class="about-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-        <div><div class="about-item-title">一站式定制服务</div><div class="about-item-text">从设计打样到批量生产，全程跟进，满足个性化需求</div></div>
-      </div>
-      <div class="about-item">
-        <div class="about-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-        <div><div class="about-item-title">严格品质管控</div><div class="about-item-text">每件产品均经过多道严格质检流程，确保品质达标</div></div>
-      </div>
-      <div class="about-item">
-        <div class="about-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-        <div><div class="about-item-title">快速交货周期</div><div class="about-item-text">高效的生产管理体系，确保按时交付，缩短供货周期</div></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="divider"></div>
-
-<div class="section" id="products">
-  <div class="section-header">
-    <div class="section-tag">产品展示</div>
-    <div class="section-title">精选家具系列</div>
-    <div class="section-sub">覆盖客厅、卧室、餐厅、办公等多种场景</div>
-  </div>
-  <div class="products-grid">
-    <div class="product-card">
-      <div class="product-img"><svg viewBox="0 0 80 60"><rect x="5" y="30" width="70" height="16" rx="3"/><rect x="10" y="20" width="60" height="12" rx="3"/><rect x="10" y="46" width="8" height="10"/><rect x="62" y="46" width="8" height="10"/></svg></div>
-      <div class="product-info"><div class="product-cat">Living Room</div><div class="product-name">现代布艺沙发系列</div><div class="product-desc">简约北欧风格，多色可选，舒适耐用。</div></div>
-    </div>
-    <div class="product-card">
-      <div class="product-img"><svg viewBox="0 0 80 60"><rect x="8" y="10" width="64" height="36" rx="2"/><rect x="8" y="46" width="10" height="10"/><rect x="62" y="46" width="10" height="10"/><rect x="8" y="40" width="64" height="8"/></svg></div>
-      <div class="product-info"><div class="product-cat">Bedroom</div><div class="product-name">实木床架 · 卧室套组</div><div class="product-desc">优质实木材料，精细打磨，多规格可选。</div></div>
-    </div>
-    <div class="product-card">
-      <div class="product-img"><svg viewBox="0 0 80 60"><ellipse cx="40" cy="22" rx="30" ry="8"/><rect x="36" y="28" width="8" height="24"/><rect x="12" y="48" width="20" height="4" rx="1"/><rect x="48" y="48" width="20" height="4" rx="1"/></svg></div>
-      <div class="product-info"><div class="product-cat">Dining</div><div class="product-name">北欧风餐桌椅套组</div><div class="product-desc">现代简约设计，4/6/8人座可选。</div></div>
-    </div>
-    <div class="product-card">
-      <div class="product-img"><svg viewBox="0 0 80 60"><rect x="10" y="5" width="60" height="45" rx="2"/><rect x="16" y="11" width="48" height="8" rx="1"/><rect x="16" y="23" width="22" height="20" rx="1"/><rect x="42" y="23" width="22" height="20" rx="1"/></svg></div>
-      <div class="product-info"><div class="product-cat">Storage</div><div class="product-name">多功能储物柜 · 书柜</div><div class="product-desc">模块化设计，灵活组合，满足多种储物需求。</div></div>
-    </div>
-    <div class="product-card">
-      <div class="product-img"><svg viewBox="0 0 80 60"><rect x="20" y="8" width="40" height="30" rx="2"/><rect x="28" y="38" width="8" height="16"/><rect x="44" y="38" width="8" height="16"/><rect x="15" y="34" width="50" height="6" rx="1"/></svg></div>
-      <div class="product-info"><div class="product-cat">Office</div><div class="product-name">人体工学办公椅</div><div class="product-desc">腰部支撑可调，透气网布材质，久坐舒适。</div></div>
-    </div>
-    <div class="product-card">
-      <div class="product-img"><svg viewBox="0 0 80 60"><rect x="8" y="15" width="64" height="35" rx="2"/><rect x="20" y="22" width="40" height="20" rx="1"/><circle cx="40" cy="12" r="3"/></svg></div>
-      <div class="product-info"><div class="product-cat">Custom</div><div class="product-name">家具配件 · OEM定制</div><div class="product-desc">支持图纸定制、品牌贴牌，全套生产服务。</div></div>
-    </div>
-  </div>
-</div>
-
-<div class="strengths" id="strengths">
-  <div class="section-header" style="margin-bottom:2rem;">
-    <div class="section-tag">工厂实力</div>
-    <div class="section-title">为何选择我们</div>
-  </div>
-  <div class="strengths-grid">
-    <div class="strength-item">
-      <div class="strength-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/></svg></div>
-      <div class="strength-title">专业生产基地</div>
-      <div class="strength-text">位于惠州惠阳区，现代化厂房配备先进生产设备，年产能稳定可靠。</div>
-    </div>
-    <div class="strength-item">
-      <div class="strength-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-      <div class="strength-title">严格品质把控</div>
-      <div class="strength-text">每批产品经过严格检验，确保出厂品质稳定，客户满意度高。</div>
-    </div>
-    <div class="strength-item">
-      <div class="strength-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></div>
-      <div class="strength-title">广泛市场覆盖</div>
-      <div class="strength-text">产品销往国内各地及海外市场，拥有丰富的供货与出口经验。</div>
-    </div>
-    <div class="strength-item">
-      <div class="strength-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
-      <div class="strength-title">专业服务团队</div>
-      <div class="strength-text">联系人龙花梅先生，快速响应客户询价与定制需求，沟通无忧。</div>
-    </div>
-  </div>
-</div>
-
-<div class="contact-section" id="contact">
-  <div class="section-header">
-    <div class="section-tag">联系我们</div>
-    <div class="section-title">在线询价</div>
-    <div class="section-sub">填写下方表单，我们将在1个工作日内与您联系</div>
-  </div>
-  <div class="contact-grid">
-    <div class="contact-info">
-      <div class="contact-item">
-        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <div><div class="contact-item-label">工厂地址</div><div class="contact-item-val">惠州市惠阳区镇隆镇甘陂村石桥村民小组</div></div>
-      </div>
-      <div class="contact-item">
-        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.29 6.29l1.28-.64a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        <div><div class="contact-item-label">联系电话</div><div class="contact-item-val">0752-3958948</div></div>
-      </div>
-      <div class="contact-item">
-        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        <div><div class="contact-item-label">联系人</div><div class="contact-item-val">龙花梅 先生</div></div>
-      </div>
-      <div class="contact-item">
-        <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-        <div><div class="contact-item-label">主营产品</div><div class="contact-item-val">家具及配件生产</div></div>
-      </div>
-    </div>
-    <div>
-      <div class="form-row">
-        <div class="form-group"><label>您的姓名</label><input type="text" placeholder="请输入姓名"></div>
-        <div class="form-group"><label>公司名称</label><input type="text" placeholder="请输入公司名称"></div>
-      </div>
-      <div class="form-row">
-        <div class="form-group"><label>联系电话</label><input type="text" placeholder="+86"></div>
-        <div class="form-group"><label>电子邮箱</label><input type="email" placeholder="example@email.com"></div>
-      </div>
-      <div class="form-group"><label>产品类别</label>
-        <select>
-          <option value="" disabled selected>请选择感兴趣的产品</option>
-          <option>客厅家具（沙发/茶几）</option>
-          <option>卧室家具（床/衣柜）</option>
-          <option>餐厅家具（餐桌椅）</option>
-          <option>办公家具</option>
-          <option>家具配件</option>
-          <option>定制 / OEM服务</option>
-          <option>其他</option>
-        </select>
-      </div>
-      <div class="form-group"><label>询价详情 / 备注</label><textarea placeholder="请描述您的需求，例如：产品款式、数量、目标市场等..."></textarea></div>
-      <button class="btn-gold" style="width:100%;padding:14px;font-size:14px;letter-spacing:2px;">提交询价</button>
-    </div>
-  </div>
-</div>
-
-<div class="footer">
-  <div>
-    <div class="footer-logo">新镒家具</div>
-    <div style="font-size:11px;color:#333;margin-top:4px;">© 2024 惠州新镒家具有限公司 · 保留所有权利</div>
-  </div>
-  <div class="footer-text">惠州市惠阳区镇隆镇甘陂村石桥村民小组</div>
-</div>
-
-</body>
-</html>
+      <div class="about-grid">
+        <div class="panel about-text">
+          <p>Huizhou Xin Yi Furniture Co., Ltd. is a well-known furniture enterprise specializing in foreign trade exports, integrating R&D, production, and sales.</p>
+          <p>公司生产范围从五金到软包，产品覆盖餐厅、客厅和卧室家具。专业团队响应客户需求，面向海内外客户提供家具产品与配套服务。</p>
+          <p>公司期待与客户建立长期合作关系，以稳定制造能力、产品开发能力和外贸服务经验，支持客户的市场拓展。</p>
+        </div>
+        <div class="panel">
