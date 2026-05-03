@@ -461,7 +461,7 @@ h1{font-size:clamp(44px,6.5vw,84px);line-height:1.02;letter-spacing:0;font-weigh
             <span>WhatsApp / WeChat is recommended for quick product communication.</span>
           </div>
         </div>
-        <form class="form-panel" id="inquiryForm">
+        <form class="form-panel" id="inquiryForm" action="https://formspree.io/f/mjglgnby" method="POST">
           <div class="form-row">
             <div class="field"><label for="name">Name</label><input id="name" type="text" placeholder="Your name" required></div>
             <div class="field"><label for="company">Company</label><input id="company" type="text" placeholder="Company name"></div>
@@ -501,15 +501,29 @@ h1{font-size:clamp(44px,6.5vw,84px);line-height:1.02;letter-spacing:0;font-weigh
   </div>
 </footer>
 
-<div class="toast" id="toast">Thank you. Please contact us by WhatsApp / WeChat or email for immediate follow-up.</div>
+<div class="toast" id="toast">Thank you. Your inquiry has been sent.</div>
 <script>
 const form = document.getElementById("inquiryForm");
 const toast = document.getElementById("toast");
-form.addEventListener("submit", (event) => {
+form.addEventListener("submit", async (event) => {
   event.preventDefault();
-  toast.classList.add("show");
-  setTimeout(() => toast.classList.remove("show"), 2600);
-  form.reset();
+  submitButton.disabled = true;
+  submitButton.textContent = "Sending...";
+  try {
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { Accept: "application/json" }
+    });
+    if (!response.ok) throw new Error("Form submission failed");
+    form.reset();
+    showToast("Thank you. Your inquiry has been sent.");
+  } catch (error) {
+    showToast("Submission failed. Please contact us by WhatsApp / WeChat or email.");
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = "Contact Us / Send Inquiry";
+  }
 });
 </script>
 </body>
