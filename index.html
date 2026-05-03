@@ -1,11 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Hui Zhou Xin Yi Furniture</title>
-</head>
-<body>
-  <h1>惠州新镒家具有限公司</h1>
-  <p>Website is working.</p>
-</body>
-</html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hui Zhou Xin Yi Furniture Co., Ltd | Export Furniture Manufacturer</title>
+<meta name="description" content="Hui Zhou Xin Yi Furniture Co., Ltd is an export furniture manufacturer integrating R&D, production and sales. Dining tables, chairs, coffee tables, shelves, mirrors and custom furniture solutions.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#171819;
+  --charcoal:#20211f;
+  --deep:#111210;
+  --paper:#f7f5ef;
+  --stone:#e5e0d6;
+  --white:#fff;
+  --muted:#6d6b64;
+  --soft:#989184;
+  --gold:#b88746;
+  --gold-dark:#8a6332;
+  --sage:#65766b;
+  --line:rgba(32,33,31,.14);
+  --shadow:0 26px 70px rgba(21,22,20,.14);
+}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--paper);color:var(--ink);line-height:1.62}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+img{max-width:100%}
+.container{width:min(1200px,calc(100% - 44px));margin:0 auto}
+.topbar{background:var(--deep);color:#eee8dc;font-size:12px;letter-spacing:.2px}
+.topbar-inner{min-height:38px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.topbar-contact{display:flex;gap:20px;flex-wrap:wrap;color:#d8d0c1}
+.topbar-actions{display:flex;align-items:center;gap:10px;white-space:nowrap}
+.mini-link{color:#fff;border-bottom:1px solid rgba(184,135,70,.75);padding-bottom:2px;font-weight:600}
+.nav{position:sticky;top:0;z-index:30;background:rgba(247,245,239,.94);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav-inner{height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand{display:flex;align-items:center;gap:14px;min-width:0}
+.brand-mark{width:46px;height:46px;background:var(--charcoal);color:var(--gold);display:grid;place-items:center;font-weight:800;letter-spacing:.5px}
+.brand-name{font-size:19px;font-weight:760;white-space:nowrap;color:var(--charcoal)}
+.brand-sub{font-size:11px;color:var(--muted);letter-spacing:.8px;text-transform:uppercase;white-space:nowrap}
+.nav-links{display:flex;align-items:center;gap:26px;font-size:14px;color:#46443d}
+.nav-links a:hover{color:var(--gold-dark)}
+.nav-cta{background:var(--charcoal);color:#fff!important;padding:10px 16px;box-shadow:0 10px 22px rgba(32,33,31,.16)}
+.nav-cta:hover{background:var(--gold-dark)!important;color:#fff!important}
+.hero{position:relative;overflow:hidden;background:var(--deep);color:#fff}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(17,18,16,.92) 0%,rgba(17,18,16,.74) 45%,rgba(17,18,16,.2) 100%),url("assets/products/dining_table_black_marble_set.png");background-size:cover;background-position:center right;transform:scale(1.02)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) 390px;gap:58px;align-items:end;min-height:650px;padding:82px 0 76px}
+.eyebrow{font-size:12px;letter-spacing:3.4px;text-transform:uppercase;color:#d5b37f;margin-bottom:22px}
+h1{font-size:clamp(44px,6.5vw,84px);line-height:1.02;letter-spacing:0;font-weight:780;max-width:850px;margin-bottom:24px}
+.hero-copy{max-width:660px;color:#e7dfd1;font-size:18px;margin-bottom:34px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:0 22px;border:1px solid transparent;cursor:pointer;transition:.22s ease;font-weight:720}
+.btn-primary{background:var(--gold);color:#141411;box-shadow:0 16px 35px rgba(184,135,70,.24)}
+.btn-primary:hover{background:#d3a25e;transform:translateY(-1px)}
+.btn-outline{border-color:rgba(255,255,255,.46);color:#fff;background:rgba(255,255,255,.04)}
+.btn-outline:hover{border-color:var(--gold);background:rgba(184,135,70,.14)}
+.hero-card{background:rgba(247,245,239,.92);color:var(--ink);padding:26px;border:1px solid rgba(255,255,255,.3);box-shadow:var(--shadow)}
+.hero-card-label{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:var(--gold-dark);font-weight:800;margin-bottom:14px}
+.hero-card strong{display:block;font-size:26px;line-height:1.15;margin-bottom:10px}
+.hero-card p{color:var(--muted);font-size:14px;margin-bottom:20px}
+.hero-contact{display:grid;gap:10px;font-size:14px;color:#34332f}
+.hero-contact span{padding-top:10px;border-top:1px solid rgba(32,33,31,.12)}
+.facts{background:var(--charcoal);color:#fff}
+.facts-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.fact{padding:30px 26px;border-right:1px solid rgba(255,255,255,.1)}
+.fact:last-child{border-right:0}
+.fact strong{display:block;color:#d6ad70;font-size:31px;line-height:1.1;margin-bottom:6px}
+.fact span{color:#c9c2b6;font-size:13px}
+.section{padding:86px 0;border-bottom:1px solid var(--line)}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:46px;margin-bottom:36px}
+.kicker{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-dark);font-weight:820;margin-bottom:10px}
+.title{font-size:clamp(30px,3.4vw,48px);line-height:1.12;color:var(--charcoal);font-weight:780}
+.desc{max-width:590px;color:var(--muted);font-size:15px}
+.about-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:28px;align-items:stretch}
+.about-panel{background:#fff;border:1px solid var(--line);padding:34px;box-shadow:0 20px 50px rgba(32,33,31,.06)}
+.about-panel.dark{background:var(--charcoal);color:#f4efe5}
+.about-panel h3{font-size:22px;margin-bottom:14px}
+.about-panel p{color:#615f58;margin-bottom:18px}
+.about-panel.dark p{color:#d7d0c3}
+.zh-copy{padding-top:20px;margin-top:22px;border-top:1px solid rgba(32,33,31,.12)}
+.about-panel.dark .zh-copy{border-top-color:rgba(255,255,255,.13)}
+.about-meta{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:24px}
+.meta-item{border:1px solid rgba(255,255,255,.14);padding:16px}
+.meta-item span{display:block;font-size:12px;color:#d6ad70;text-transform:uppercase;letter-spacing:1.3px;margin-bottom:5px}
+.meta-item b{font-size:15px}
+.image-strip{display:grid;grid-template-columns:1.15fr .85fr;gap:14px;height:100%}
+.image-strip img{width:100%;height:100%;object-fit:cover;background:#fff;border:1px solid var(--line)}
+.factory-section{background:#efebe2}
+.factory-layout{display:grid;grid-template-columns:1.08fr .92fr;gap:30px;align-items:start}
+.factory-photo{background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);overflow:hidden}
+.factory-photo img{width:100%;display:block}
+.factory-caption{padding:16px 20px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+.trust-panel{background:var(--charcoal);color:#f7f2e8;padding:32px;border:1px solid rgba(255,255,255,.12);box-shadow:0 20px 55px rgba(32,33,31,.12)}
+.trust-panel h3{font-size:28px;line-height:1.16;margin-bottom:12px}
+.trust-panel p{color:#d8d0c2;margin-bottom:20px}
+.trust-list{display:grid;gap:13px}
+.trust-item{display:grid;grid-template-columns:38px 1fr;gap:13px;padding:14px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.035)}
+.trust-num{height:38px;background:rgba(184,135,70,.16);color:#d6ad70;display:grid;place-items:center;font-weight:820}
