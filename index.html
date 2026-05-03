@@ -1,11 +1,267 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <title>Xinyi Furniture</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>惠州新镒家具有限公司</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:"PingFang SC","Microsoft YaHei",sans-serif;background:#0f0f0f;color:#e8e0d0;}
+.nav{background:rgba(15,15,15,0.95);border-bottom:0.5px solid #2a2a2a;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;position:sticky;top:0;z-index:10;}
+.nav-logo{font-size:18px;font-weight:500;color:#c9a96e;letter-spacing:2px;}
+.nav-sub{font-size:11px;color:#888;letter-spacing:1px;margin-top:2px;}
+.nav-links{display:flex;gap:2rem;}
+.nav-links a{font-size:13px;color:#aaa;text-decoration:none;letter-spacing:0.5px;cursor:pointer;}
+.nav-links a:hover{color:#c9a96e;}
+.hero{background:#0f0f0f;padding:5rem 2rem 4rem;text-align:center;border-bottom:0.5px solid #1e1e1e;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,rgba(201,169,110,0.07) 0%,transparent 70%);}
+.hero-tag{font-size:11px;letter-spacing:3px;color:#c9a96e;margin-bottom:1.5rem;text-transform:uppercase;}
+.hero h1{font-size:42px;font-weight:500;color:#f0e8d8;line-height:1.2;margin-bottom:1rem;}
+.hero h1 span{color:#c9a96e;}
+.hero-sub{font-size:15px;color:#888;max-width:480px;margin:0 auto 2.5rem;line-height:1.7;}
+.hero-btns{display:flex;gap:1rem;justify-content:center;}
+.btn-gold{background:#c9a96e;color:#0f0f0f;border:none;padding:12px 28px;font-size:13px;letter-spacing:1px;cursor:pointer;border-radius:2px;font-weight:500;}
+.btn-outline{background:transparent;color:#c9a96e;border:0.5px solid #c9a96e;padding:12px 28px;font-size:13px;letter-spacing:1px;cursor:pointer;border-radius:2px;}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:0.5px solid #1e1e1e;border-bottom:0.5px solid #1e1e1e;}
+.stat{padding:2rem;text-align:center;border-right:0.5px solid #1e1e1e;}
+.stat:last-child{border-right:none;}
+.stat-num{font-size:28px;font-weight:500;color:#c9a96e;margin-bottom:4px;}
+.stat-label{font-size:12px;color:#666;}
+.section{padding:4rem 2rem;}
+.section-tag{font-size:11px;letter-spacing:3px;color:#c9a96e;margin-bottom:0.75rem;text-transform:uppercase;}
+.section-title{font-size:26px;font-weight:500;color:#f0e8d8;margin-bottom:0.5rem;}
+.section-sub{font-size:14px;color:#666;margin-bottom:3rem;}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;}
+.about-text p{font-size:14px;color:#999;line-height:1.8;margin-bottom:1rem;}
+.about-items{display:flex;flex-direction:column;gap:1rem;}
+.about-item{display:flex;align-items:flex-start;gap:1rem;padding:1rem;border:0.5px solid #1e1e1e;border-radius:2px;}
+.about-icon{width:32px;height:32px;background:#1a1a1a;border:0.5px solid #2a2a2a;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.about-icon svg{width:16px;height:16px;stroke:#c9a96e;fill:none;stroke-width:1.5;}
+.about-item-title{font-size:13px;font-weight:500;color:#e0d8c8;margin-bottom:2px;}
+.about-item-text{font-size:12px;color:#666;}
+.divider{height:0.5px;background:#1a1a1a;margin:0 2rem;}
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+.product-card{background:#151515;border:0.5px solid #222;border-radius:2px;overflow:hidden;cursor:pointer;}
+.product-img{height:180px;background:#161616;display:flex;align-items:center;justify-content:center;}
+.product-img svg{width:64px;height:64px;stroke:#c9a96e;fill:none;stroke-width:1;}
+.product-info{padding:1rem;}
+.product-cat{font-size:10px;letter-spacing:2px;color:#c9a96e;margin-bottom:4px;text-transform:uppercase;}
+.product-name{font-size:14px;font-weight:500;color:#e0d8c8;margin-bottom:6px;}
+.product-desc{font-size:12px;color:#666;line-height:1.6;}
+.strengths{background:#0c0c0c;padding:4rem 2rem;border-top:0.5px solid #1a1a1a;border-bottom:0.5px solid #1a1a1a;}
+.strengths-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;}
+.strength-item{padding:1.5rem;border:0.5px solid #1e1e1e;border-radius:2px;}
+.strength-icon{width:36px;height:36px;border:0.5px solid #2a2a2a;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;}
+.strength-icon svg{width:18px;height:18px;stroke:#c9a96e;fill:none;stroke-width:1.5;}
+.strength-title{font-size:13px;font-weight:500;color:#e0d8c8;margin-bottom:6px;}
+.strength-text{font-size:12px;color:#555;line-height:1.7;}
+.contact-section{padding:4rem 2rem;}
+.contact-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:4rem;align-items:start;}
+.contact-info{display:flex;flex-direction:column;gap:1.5rem;}
+.contact-item{display:flex;gap:1rem;align-items:flex-start;}
+.contact-item svg{width:16px;height:16px;stroke:#c9a96e;fill:none;stroke-width:1.5;margin-top:3px;flex-shrink:0;}
+.contact-item-label{font-size:11px;color:#c9a96e;letter-spacing:1px;margin-bottom:4px;text-transform:uppercase;}
+.contact-item-val{font-size:13px;color:#aaa;}
+.form-group{margin-bottom:1rem;}
+.form-group label{display:block;font-size:11px;color:#888;letter-spacing:1px;margin-bottom:6px;text-transform:uppercase;}
+.form-group input,.form-group textarea,.form-group select{width:100%;background:#0c0c0c;border:0.5px solid #2a2a2a;color:#e0d8c8;padding:10px 12px;font-size:13px;font-family:inherit;border-radius:2px;outline:none;}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:#c9a96e;}
+.form-group textarea{height:100px;resize:vertical;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.footer{background:#080808;border-top:0.5px solid #1a1a1a;padding:2rem;display:flex;align-items:center;justify-content:space-between;}
+.footer-logo{font-size:16px;font-weight:500;color:#c9a96e;letter-spacing:2px;}
+.footer-text{font-size:12px;color:#444;}
+.section-header{margin-bottom:2.5rem;}
+</style>
 </head>
 <body>
-  <h1>惠州新镒家具有限公司</h1>
-  <p>Factory website is working!</p>
+
+<nav class="nav">
+  <div>
+    <div class="nav-logo">新镒家具</div>
+    <div class="nav-sub">惠州新镒家具有限公司</div>
+  </div>
+  <div class="nav-links">
+    <a href="#about">关于我们</a>
+    <a href="#products">产品展示</a>
+    <a href="#strengths">工厂实力</a>
+    <a href="#contact" style="color:#c9a96e;">在线询价</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div style="position:relative;">
+    <div class="hero-tag">惠州新镒家具有限公司 · 专业家具制造商</div>
+    <h1>打造每一件<span>精致家具</span><br>从设计到交付</h1>
+    <p class="hero-sub">集研发、生产、定制于一体的现代家具制造商，主营家具及配件生产，为客户提供高品质家居解决方案。</p>
+    <div class="hero-btns">
+      <button class="btn-gold" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">立即询价</button>
+      <button class="btn-outline" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">查看产品</button>
+    </div>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="stat-num">专业</div><div class="stat-label">家具及配件生产</div></div>
+  <div class="stat"><div class="stat-num">优质</div><div class="stat-label">原材料精选</div></div>
+  <div class="stat"><div class="stat-num">定制</div><div class="stat-label">OEM / ODM 服务</div></div>
+  <div class="stat"><div class="stat-num">快速</div><div class="stat-label">交货周期保障</div></div>
+</div>
+
+<div class="section" id="about">
+  <div class="about-grid">
+    <div>
+      <div class="section-header">
+        <div class="section-tag">关于我们</div>
+        <div class="section-title">以工艺为本<br>以品质为魂</div>
+      </div>
+      <div class="about-text">
+        <p>惠州新镒家具有限公司位于惠州市惠阳区镇隆镇甘陂村石桥村民小组，是一家专注于家具及配件研发、生产的制造型企业。</p>
+        <p>公司主营各类现代家具产品，凭借精湛的工艺与严格的品质管控，深受国内外客户的信赖与好评。</p>
+      </div>
+    </div>
+    <div class="about-items">
+      <div class="about-item">
+        <div class="about-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <div><div class="about-item-title">一站式定制服务</div><div class="about-item-text">从设计打样到批量生产，全程跟进，满足个性化需求</div></div>
+      </div>
+      <div class="about-item">
+        <div class="about-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+        <div><div class="about-item-title">严格品质管控</div><div class="about-item-text">每件产品均经过多道严格质检流程，确保品质达标</div></div>
+      </div>
+      <div class="about-item">
+        <div class="about-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <div><div class="about-item-title">快速交货周期</div><div class="about-item-text">高效的生产管理体系，确保按时交付，缩短供货周期</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="section" id="products">
+  <div class="section-header">
+    <div class="section-tag">产品展示</div>
+    <div class="section-title">精选家具系列</div>
+    <div class="section-sub">覆盖客厅、卧室、餐厅、办公等多种场景</div>
+  </div>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-img"><svg viewBox="0 0 80 60"><rect x="5" y="30" width="70" height="16" rx="3"/><rect x="10" y="20" width="60" height="12" rx="3"/><rect x="10" y="46" width="8" height="10"/><rect x="62" y="46" width="8" height="10"/></svg></div>
+      <div class="product-info"><div class="product-cat">Living Room</div><div class="product-name">现代布艺沙发系列</div><div class="product-desc">简约北欧风格，多色可选，舒适耐用。</div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-img"><svg viewBox="0 0 80 60"><rect x="8" y="10" width="64" height="36" rx="2"/><rect x="8" y="46" width="10" height="10"/><rect x="62" y="46" width="10" height="10"/><rect x="8" y="40" width="64" height="8"/></svg></div>
+      <div class="product-info"><div class="product-cat">Bedroom</div><div class="product-name">实木床架 · 卧室套组</div><div class="product-desc">优质实木材料，精细打磨，多规格可选。</div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-img"><svg viewBox="0 0 80 60"><ellipse cx="40" cy="22" rx="30" ry="8"/><rect x="36" y="28" width="8" height="24"/><rect x="12" y="48" width="20" height="4" rx="1"/><rect x="48" y="48" width="20" height="4" rx="1"/></svg></div>
+      <div class="product-info"><div class="product-cat">Dining</div><div class="product-name">北欧风餐桌椅套组</div><div class="product-desc">现代简约设计，4/6/8人座可选。</div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-img"><svg viewBox="0 0 80 60"><rect x="10" y="5" width="60" height="45" rx="2"/><rect x="16" y="11" width="48" height="8" rx="1"/><rect x="16" y="23" width="22" height="20" rx="1"/><rect x="42" y="23" width="22" height="20" rx="1"/></svg></div>
+      <div class="product-info"><div class="product-cat">Storage</div><div class="product-name">多功能储物柜 · 书柜</div><div class="product-desc">模块化设计，灵活组合，满足多种储物需求。</div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-img"><svg viewBox="0 0 80 60"><rect x="20" y="8" width="40" height="30" rx="2"/><rect x="28" y="38" width="8" height="16"/><rect x="44" y="38" width="8" height="16"/><rect x="15" y="34" width="50" height="6" rx="1"/></svg></div>
+      <div class="product-info"><div class="product-cat">Office</div><div class="product-name">人体工学办公椅</div><div class="product-desc">腰部支撑可调，透气网布材质，久坐舒适。</div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-img"><svg viewBox="0 0 80 60"><rect x="8" y="15" width="64" height="35" rx="2"/><rect x="20" y="22" width="40" height="20" rx="1"/><circle cx="40" cy="12" r="3"/></svg></div>
+      <div class="product-info"><div class="product-cat">Custom</div><div class="product-name">家具配件 · OEM定制</div><div class="product-desc">支持图纸定制、品牌贴牌，全套生产服务。</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="strengths" id="strengths">
+  <div class="section-header" style="margin-bottom:2rem;">
+    <div class="section-tag">工厂实力</div>
+    <div class="section-title">为何选择我们</div>
+  </div>
+  <div class="strengths-grid">
+    <div class="strength-item">
+      <div class="strength-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/></svg></div>
+      <div class="strength-title">专业生产基地</div>
+      <div class="strength-text">位于惠州惠阳区，现代化厂房配备先进生产设备，年产能稳定可靠。</div>
+    </div>
+    <div class="strength-item">
+      <div class="strength-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <div class="strength-title">严格品质把控</div>
+      <div class="strength-text">每批产品经过严格检验，确保出厂品质稳定，客户满意度高。</div>
+    </div>
+    <div class="strength-item">
+      <div class="strength-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></div>
+      <div class="strength-title">广泛市场覆盖</div>
+      <div class="strength-text">产品销往国内各地及海外市场，拥有丰富的供货与出口经验。</div>
+    </div>
+    <div class="strength-item">
+      <div class="strength-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+      <div class="strength-title">专业服务团队</div>
+      <div class="strength-text">联系人龙花梅先生，快速响应客户询价与定制需求，沟通无忧。</div>
+    </div>
+  </div>
+</div>
+
+<div class="contact-section" id="contact">
+  <div class="section-header">
+    <div class="section-tag">联系我们</div>
+    <div class="section-title">在线询价</div>
+    <div class="section-sub">填写下方表单，我们将在1个工作日内与您联系</div>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div><div class="contact-item-label">工厂地址</div><div class="contact-item-val">惠州市惠阳区镇隆镇甘陂村石桥村民小组</div></div>
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.29 6.29l1.28-.64a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <div><div class="contact-item-label">联系电话</div><div class="contact-item-val">0752-3958948</div></div>
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <div><div class="contact-item-label">联系人</div><div class="contact-item-val">龙花梅 先生</div></div>
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        <div><div class="contact-item-label">主营产品</div><div class="contact-item-val">家具及配件生产</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="form-row">
+        <div class="form-group"><label>您的姓名</label><input type="text" placeholder="请输入姓名"></div>
+        <div class="form-group"><label>公司名称</label><input type="text" placeholder="请输入公司名称"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>联系电话</label><input type="text" placeholder="+86"></div>
+        <div class="form-group"><label>电子邮箱</label><input type="email" placeholder="example@email.com"></div>
+      </div>
+      <div class="form-group"><label>产品类别</label>
+        <select>
+          <option value="" disabled selected>请选择感兴趣的产品</option>
+          <option>客厅家具（沙发/茶几）</option>
+          <option>卧室家具（床/衣柜）</option>
+          <option>餐厅家具（餐桌椅）</option>
+          <option>办公家具</option>
+          <option>家具配件</option>
+          <option>定制 / OEM服务</option>
+          <option>其他</option>
+        </select>
+      </div>
+      <div class="form-group"><label>询价详情 / 备注</label><textarea placeholder="请描述您的需求，例如：产品款式、数量、目标市场等..."></textarea></div>
+      <button class="btn-gold" style="width:100%;padding:14px;font-size:14px;letter-spacing:2px;">提交询价</button>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div>
+    <div class="footer-logo">新镒家具</div>
+    <div style="font-size:11px;color:#333;margin-top:4px;">© 2024 惠州新镒家具有限公司 · 保留所有权利</div>
+  </div>
+  <div class="footer-text">惠州市惠阳区镇隆镇甘陂村石桥村民小组</div>
+</div>
+
 </body>
 </html>
