@@ -98,7 +98,259 @@ h1{font-size:clamp(44px,6.5vw,84px);line-height:1.02;letter-spacing:0;font-weigh
 .trust-list{display:grid;gap:13px}
 .trust-item{display:grid;grid-template-columns:38px 1fr;gap:13px;padding:14px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.035)}
 .trust-num{height:38px;background:rgba(184,135,70,.16);color:#d6ad70;display:grid;place-items:center;font-weight:820}
-              <div class="product-index">02 / Seating</div>
+.trust-item b{display:block;color:#fff;margin-bottom:3px}
+.trust-item span{display:block;color:#cfc7ba;font-size:13px}
+.trust-cta{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+.product-showcase{background:#fff}
+.product-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.product-card{position:relative;overflow:hidden;background:var(--paper);border:1px solid var(--line);box-shadow:0 18px 45px rgba(32,33,31,.08);min-height:430px;display:flex;flex-direction:column;transition:.22s ease}
+.product-card:hover{transform:translateY(-5px);box-shadow:0 28px 70px rgba(32,33,31,.16)}
+.product-image{height:235px;background:#f4f1ea;overflow:hidden}
+.product-image img{width:100%;height:100%;object-fit:cover;display:block;transition:.35s ease}
+.product-card:hover .product-image img{transform:scale(1.04)}
+.product-body{padding:20px;display:flex;flex-direction:column;gap:13px;flex:1}
+.product-index{font-size:12px;color:var(--gold-dark);font-weight:820;letter-spacing:2px;text-transform:uppercase}
+.product-body h3{font-size:22px;line-height:1.15;color:var(--charcoal)}
+.product-body p{font-size:14px;color:var(--muted)}
+.product-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto}
+.product-tags span{font-size:11px;color:#504d45;background:#eee9df;padding:5px 8px}
+.product-link{margin-top:8px;color:var(--gold-dark);font-weight:800;font-size:13px}
+.featured-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+.feature-photo{position:relative;min-height:520px;background:#fff;border:1px solid var(--line);overflow:hidden;box-shadow:var(--shadow)}
+.feature-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.feature-caption{position:absolute;left:24px;right:24px;bottom:24px;background:rgba(17,18,16,.86);color:#fff;padding:22px}
+.feature-caption small{color:#d6ad70;text-transform:uppercase;letter-spacing:2px;font-weight:800}
+.feature-caption h3{font-size:28px;line-height:1.16;margin:8px 0}
+.feature-caption p{color:#e3dacd;font-size:14px}
+.mini-gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.mini-card{background:#fff;border:1px solid var(--line);overflow:hidden;min-height:251px}
+.mini-card img{width:100%;height:190px;object-fit:cover;display:block;background:#f7f5ef}
+.mini-card div{padding:14px 16px}
+.mini-card b{display:block;color:var(--charcoal)}
+.mini-card span{font-size:13px;color:var(--muted)}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.step{background:#fff;padding:26px}
+.step-num{font-size:13px;color:var(--gold-dark);font-weight:820;margin-bottom:20px}
+.step h3{font-size:18px;margin-bottom:8px}
+.step p{font-size:13px;color:var(--muted)}
+.contact-section{background:var(--charcoal);color:#fff}
+.contact-section .title{color:#fff}
+.contact-section .desc{color:#d5cec1}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px}
+.contact-panel,.form-panel{background:#f7f5ef;color:var(--ink);padding:30px;border:1px solid rgba(255,255,255,.16)}
+.contact-panel h3{font-size:24px;margin-bottom:8px}
+.contact-lead{color:var(--muted);margin-bottom:22px}
+.contact-list{display:grid;gap:16px}
+.contact-item{display:grid;grid-template-columns:30px 1fr;gap:12px;color:#45433c}
+.contact-item svg{width:23px;height:23px;stroke:var(--gold-dark);fill:none;stroke-width:1.8;margin-top:2px}
+.contact-label{font-size:12px;color:var(--gold-dark);font-weight:820;letter-spacing:1.2px;text-transform:uppercase}
+.contact-value{font-size:14px;word-break:break-word}
+.contact-highlight{margin-top:24px;background:var(--charcoal);color:#fff;padding:18px}
+.contact-highlight b{display:block;color:#d6ad70;margin-bottom:4px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:13px;color:#48463f;margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:#fff;color:var(--ink);padding:12px 13px;outline:none}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}
+.field textarea{min-height:126px;resize:vertical}
+.submit{width:100%;background:var(--gold);color:#151511;font-weight:820}
+.submit:hover{background:#d0a05d}
+.note{font-size:12px;color:var(--muted);margin-top:10px}
+.footer{background:var(--deep);color:#cfc7ba;padding:30px 0}
+.footer-inner{display:flex;justify-content:space-between;gap:24px;align-items:center;font-size:13px}
+.footer strong{display:block;color:#fff;font-size:16px;margin-bottom:4px}
+.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(30px);opacity:0;pointer-events:none;background:var(--deep);color:#fff;border:1px solid rgba(184,135,70,.5);padding:12px 18px;transition:.2s;z-index:60}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media (max-width:1080px){
+  .product-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-grid{grid-template-columns:1fr;min-height:auto}
+  .hero-card{max-width:460px}
+}
+@media (max-width:900px){
+  .topbar-inner{align-items:flex-start;flex-direction:column;padding:9px 0}
+  .nav-links{display:none}
+  .facts-grid,.process{grid-template-columns:repeat(2,1fr)}
+  .about-grid,.factory-layout,.featured-grid,.contact-grid,.section-head{display:block}
+  .section-head .desc{margin-top:12px}
+  .image-strip,.mini-gallery,.trust-panel{margin-top:18px}
+  .contact-panel{margin-bottom:18px}
+}
+@media (max-width:620px){
+  .container{width:calc(100% - 28px)}
+  .brand-name{font-size:16px}
+  .hero-grid{padding:58px 0 48px}
+  h1{font-size:40px}
+  .hero-copy{font-size:16px}
+  .hero-actions{display:grid}
+  .btn{width:100%}
+  .facts-grid,.product-grid,.process,.about-meta,.form-row,.image-strip,.mini-gallery{grid-template-columns:1fr}
+  .fact{border-right:0;border-bottom:1px solid rgba(255,255,255,.1)}
+  .section{padding:58px 0}
+  .product-card{min-height:0}
+  .footer-inner{display:block}
+  .footer-inner div+div{margin-top:14px}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="topbar-contact">
+      <span>WhatsApp / WeChat: +86 13500181948</span>
+      <span>Tel: +86-752-3958948</span>
+      <span>Tel: +1--752-3958948</span>
+        <span>Tel: +86-752-3958948</span>
+      <span>Email: mike@xy-furniture.com</span>
+    </div>
+    <div class="topbar-actions">
+      <a class="mini-link" href="#contact">Contact Us / Send Inquiry</a>
+    </div>
+  </div>
+</div>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#top" aria-label="Hui Zhou Xin Yi Furniture Co., Ltd">
+      <div class="brand-mark">XY</div>
+      <div>
+        <div class="brand-name">Hui Zhou Xin Yi Furniture</div>
+        <div class="brand-sub">Export Furniture Manufacturer</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#factory">Factory</a>
+      <a href="#products">Products</a>
+      <a href="#collections">Collections</a>
+      <a href="#workflow">Process</a>
+      <a href="#contact" class="nav-cta">Contact Us / Send Inquiry</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Great Peace Group (HK) Co., Limited</div>
+      <h1>Export Furniture Made for Modern Living Spaces</h1>
+      <p class="hero-copy">Hui Zhou Xin Yi Furniture Co., Ltd integrates R&D, production and sales for dining tables, dining chairs, coffee tables, side tables, shelves, mirrors and customized furniture solutions.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">Contact Us / Send Inquiry</a>
+        <a class="btn btn-outline" href="#products">View Product Categories</a>
+      </div>
+    </div>
+    <aside class="hero-card">
+      <div class="hero-card-label">Direct Factory Contact</div>
+      <strong>Fast quotation for OEM / ODM furniture orders.</strong>
+      <p>Share your target category, quantity, material, market and delivery plan. Our team will follow up with product options and pricing.</p>
+      <div class="hero-contact">
+        <span><b>WhatsApp / WeChat</b><br>+86 13501577768</span>
+        <span><b>Email</b><br>mike.sheng@vip.163.com</span>
+      </div>
+    </aside>
+  </div>
+</header>
+
+<section class="facts">
+  <div class="container facts-grid">
+    <div class="fact"><strong>2003</strong><span>Established</span></div>
+    <div class="fact"><strong>30,000㎡</strong><span>Self-owned factory</span></div>
+    <div class="fact"><strong>200+</strong><span>Team members</span></div>
+    <div class="fact"><strong>OEM</strong><span>Custom export orders</span></div>
+  </div>
+</section>
+
+<main>
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Company Profile</div>
+          <h2 class="title">A furniture partner for global buyers.</h2>
+        </div>
+        <p class="desc">We serve importers, distributors, retailers, project buyers and brand owners with production-ready furniture solutions.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-panel">
+          <h3>English</h3>
+          <p>Huizhou Xin Yi Furniture Co., Ltd. is a well-known furniture enterprise specializing in foreign trade exports, integrating R&D, production and sales. Established in 2003, we operate a self-owned factory covering approximately 30,000 square meters with about 200 staff members.</p>
+          <p>Our production range covers hardware structures, metal frames, stone and glass tabletops, upholstery and finished furniture for dining rooms, living rooms, bedrooms and commercial interiors.</p>
+          <div class="zh-copy">
+            <h3>中文</h3>
+            <p>惠州新镒家具有限公司成立于2003年，是一家专注外贸出口的家具企业，集研发、生产、销售于一体。公司拥有约30000平方米自有工厂及约200名员工。</p>
+            <p>产品覆盖餐桌、餐椅、茶几、边几、置物架、墙镜及定制家具方案，可为客户提供从产品开发到批量交付的制造支持。</p>
+          </div>
+        </div>
+        <div class="about-panel dark">
+          <h3>Manufacturing Scope</h3>
+          <p>From hardware to upholstery, our team supports product development, sampling, production coordination, quality control and export communication.</p>
+          <div class="about-meta">
+            <div class="meta-item"><span>Factory</span><b>Huizhou, Guangdong</b></div>
+            <div class="meta-item"><span>Business</span><b>R&D / Production / Sales</b></div>
+            <div class="meta-item"><span>Products</span><b>Dining, Living, Storage</b></div>
+            <div class="meta-item"><span>Service</span><b>OEM / ODM Support</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section factory-section" id="factory">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Factory Strength</div>
+          <h2 class="title">Visible capacity, reliable export execution.</h2>
+        </div>
+        <p class="desc">Factory photos help buyers understand how we control production, showroom display, stock organization and shipment preparation before placing orders.</p>
+      </div>
+      <div class="factory-layout">
+        <div class="factory-photo">
+          <img src="assets/factory_strength.png" alt="Hui Zhou Xin Yi Furniture factory buildings, production workshop, showroom, chair production and warehouse">
+          <div class="factory-caption">Office buildings, production workshops, showroom area, upholstered chair production and packed-goods warehouse.</div>
+        </div>
+        <div class="trust-panel">
+          <h3>Why global buyers can trust Xin Yi Furniture</h3>
+          <p>We present real factory scenes because export furniture buyers need more than product photos. They need to see production capacity, workflow control and shipment readiness.</p>
+          <div class="trust-list">
+            <div class="trust-item"><div class="trust-num">01</div><div><b>Self-owned factory scale</b><span>Approximately 30,000 square meters of production space supports stable sampling, batch production and repeat orders.</span></div></div>
+            <div class="trust-item"><div class="trust-num">02</div><div><b>Integrated production workflow</b><span>Metal frame processing, table production, upholstery, showroom review and packing are coordinated under one manufacturing system.</span></div></div>
+            <div class="trust-item"><div class="trust-num">03</div><div><b>Showroom and product verification</b><span>Finished dining sets, coffee tables and chairs can be reviewed visually before customers confirm product direction and order details.</span></div></div>
+            <div class="trust-item"><div class="trust-num">04</div><div><b>Export-ready warehouse</b><span>Organized carton storage and pallet handling make shipment preparation clearer for wholesale and project orders.</span></div></div>
+          </div>
+          <div class="trust-cta">
+            <a class="btn btn-primary" href="#contact">Contact Us / Send Inquiry</a>
+            <a class="btn btn-outline" href="#products">View Products</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-showcase" id="products">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Product Categories</div>
+          <h2 class="title">Real products, ready for inquiry.</h2>
+        </div>
+        <p class="desc">Our product catalog includes dining tables, chairs, coffee tables, side tables, mirrors, and customized furniture solutions.</p>
+      </div>
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="product-image"><img src="assets/products/dining_table_round_marble_set.png" alt="Round marble dining table set"></div>
+          <div class="product-body">
+            <div class="product-index">01 / Dining</div>
+            <h3>Dining Tables</h3>
+            <p>Marble, sintered stone, glass and wood-look tables with metal bases for residential and commercial dining spaces.</p>
+            <div class="product-tags"><span>Round</span><span>Extendable</span><span>Stone Top</span></div>
+            <a class="product-link" href="#contact">Send Inquiry</a>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image"><img src="assets/products/dining_chair_green_cream_pair.png" alt="Modern upholstered dining chairs"></div>
+          <div class="product-body">
+            <div class="product-index">02 / Seating</div>
             <h3>Dining Chairs</h3>
             <p>Upholstered chairs with metal legs, curved backs, high-density foam and color options for coordinated collections.</p>
             <div class="product-tags"><span>Fabric</span><span>PU</span><span>Metal Legs</span></div>
@@ -139,7 +391,7 @@ h1{font-size:clamp(44px,6.5vw,84px);line-height:1.02;letter-spacing:0;font-weigh
     </div>
   </section>
 
-  <section class="section" id="collections">
+ <section class="section" id="collections">
     <div class="container">
       <div class="section-head">
         <div>
@@ -262,3 +514,15 @@ form.addEventListener("submit", (event) => {
 </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
